@@ -129,8 +129,7 @@ function ReciteSlokha(props) {
                     }
                     if (
                         tracker >= parseFloat(item.begin) &&
-                        tracker <= parseFloat(item.end) &&
-                        !item.lines[0]
+                        tracker <= parseFloat(item.end)
                     ) {
                         // className += ' current';
                         const scrollView = document.querySelector('#active');
@@ -138,7 +137,7 @@ function ReciteSlokha(props) {
                         if (scrollView)
                             scrollView.scrollIntoView({
                                 behavior: 'smooth',
-                                block: 'start',
+                                block: 'center',
                                 inline: 'start',
                             });
                     }
